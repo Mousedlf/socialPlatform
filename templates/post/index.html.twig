@@ -4,19 +4,21 @@
 
 {% block body %}
 
+
+
+
     <h1>Posts</h1>
     <a href="{{ path('create_post') }}">create</a>
 
 
     {% for post in posts %}
 
-        <h4>{{ post.title }}</h4>
-        <p>{{ post.content }}</p>
-        <p class="text-secondary">{{ post.createdAt|date('H:s - d/m/Y') }}</p>
-        <a href="{{ path('show_post', {id:post.id}) }}">see more</a>
-        <a href="{{ path('edit_post', {id:post.id}) }}">edit</a>
+        <div class="card my-4 p-4">
+            <p class="text-secondary">{{ post.createdAt|date('H:s - d/m/Y') }}</p>
+            <p>{{ post.content }}</p>
+            <a href="{{ path('show_post', {id:post.id}) }}">see more</a>
 
-        <hr>
+        </div>
 
     {% endfor %}
 

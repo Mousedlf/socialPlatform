@@ -4,6 +4,7 @@
 
 {% block body %}
 
+    <a href="{{ path('app_posts') }}">Back</a>
 
     {% if edit %}
         <h1>edit post</h1>
@@ -18,11 +19,10 @@
     {{ form_row(formPost.title) }}
     {{ form_row(formPost.content) }}
 
-    <button type="submit" class="btn btn-success">ok</button>
+    <button type="submit" class="btn btn-success">Post</button>
 
     {{ form_end(formPost) }}
 
-    <a href="{{ path('app_posts', {id:post.id}) }}">retour</a>
 
 
 
