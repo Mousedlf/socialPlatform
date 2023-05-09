@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PostController!{% endblock %}
+
+{% block body %}
+
+    <h1>Post</h1>
+
+
+
+        <h4>{{ post.title }}</h4>
+        <p>{{ post.content }}</p>
+        <p class="text-secondary">{{ post.createdAt|date('H:s - d/m/Y') }}</p>
+
+    <a href="{{ path('app_posts', {id:post.id}) }}">retour</a>
+
+
+
+
+{% endblock %}

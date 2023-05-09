@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PostController!{% endblock %}
+
+{% block body %}
+
+
+    {% if edit %}
+        <h1>edit post</h1>
+
+    {% else %}
+        <h1>add a post</h1>
+
+    {% endif %}
+
+    {{ form_start(formPost)}}
+
+    {{ form_row(formPost.title) }}
+    {{ form_row(formPost.content) }}
+
+    <button type="submit" class="btn btn-success">ok</button>
+
+    {{ form_end(formPost) }}
+
+    <a href="{{ path('app_posts', {id:post.id}) }}">retour</a>
+
+
+
+
+{% endblock %}
